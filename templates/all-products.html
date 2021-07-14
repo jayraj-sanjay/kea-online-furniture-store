@@ -1,0 +1,239 @@
+<!doctype html>
+<html class="no-js" lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>KEA</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <!-- Place favicon.ico in the root directory -->
+    <link rel="shortcut icon" type="image/x-icon" href="/static/images/favicon.ico">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    
+
+     <!-- All css files are included here. -->
+    <!-- Bootstrap fremwork main css -->
+    <link rel="stylesheet" href="/static/css/bootstrap.min.css">
+    <!-- Owl Carousel main css -->
+    <link rel="stylesheet" href="/static/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="/static/css/owl.theme.default.min.css">
+    <!-- This core.css file contents all plugings css file. -->
+    <link rel="stylesheet" href="/static/css/core.css">
+    <!-- Theme shortcodes/elements style -->
+    <link rel="stylesheet" href="/static/css/shortcode/shortcodes.css">
+    <!-- Theme main style -->
+    <link rel="stylesheet" href="/static/css/style.css">
+    <!-- Responsive css -->
+    <link rel="stylesheet" href="/static/css/responsive.css">
+    <!-- User style -->
+    <link rel="stylesheet" href="/static/css/custom.css">
+    <link rel="stylesheet" href="/static/css/pagination.css">
+
+    <!-- Modernizr JS -->
+    
+    <script src="/static/js/vendor/modernizr-2.8.3.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="/static/js/all-products.js"></script>
+    
+</head>
+
+<body>
+    <!--[if lt IE 8]>
+        <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->  
+
+    <!-- Body main wrapper start -->
+    <div class="wrapper fixed__footer">
+        <!-- Start Header Style -->
+        <header id="header" class="htc-header header--3 greyBackground">
+            <!-- Start Mainmenu Area -->
+            <div id="sticky-header-with-topbar" class="mainmenu__area sticky__header ">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-2 col-lg-2 col-sm-3 col-xs-3">
+                            <div class="logo">
+                                <a href="/adminHome">
+                                    <img src="/static/images/logo/logo.png" alt="logo">
+                                </a>
+                            </div>
+                        </div>
+                        <!-- Start MAinmenu Ares -->
+                        <div class="col-md-8 col-lg-8 col-sm-6 col-xs-6">
+                            <nav class="mainmenu__nav hidden-xs hidden-sm">
+                                <ul class="main__menu">
+                                    <li class="drop"><a href="/adminHome">Home</a></li>
+                                    <li class="drop"><a href="/allProducts">Products List</a>
+                                    </li>
+                                    <li class="drop"><a href="/addProduct">Add Product</a>
+                                    </li>
+                                </ul>
+                            </nav>                     
+                        </div>
+                        <div class="col-md-2 col-sm-4 col-xs-3">
+                            <ul class="menu-extra">
+                                <li><a href="/logout">Logout</a></li>
+                            </ul>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- End Header Style -->
+        
+        <div class="body__overlay"></div>
+
+        <!-- Start Bradcaump area -->
+        <div class="ht__bradcaump__area" style="background: rgba(0, 0, 0, 0) url(/static/images/bg/2.jpg) no-repeat scroll center center / cover ;">
+            <div class="ht__bradcaump__wrap">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <div class="bradcaump__inner text-center">
+                                <h1 class="bradcaump-title">All Product List</h1>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End Bradcaump area -->
+        <!-- cart-main-area start -->
+        <div class="cart-main-area ptb--120 bg__white">
+            <div class="container">
+                
+                <div class="row">
+                    <div class="col-md-12" style="margin-bottom:10px">
+                        
+                        <div class="container">
+                            <div class="row" id="search">
+                                <form id="search-form" >
+                                    <div class="form-group col-xs-9">
+                                        <input class="form-control" type="text" placeholder="Search" name="searchText" id="searchText"/>
+                                    </div>
+                                    <div class="form-group col-xs-3">
+                                        <button type="submit" class="btn btn-block btn-primary" id='searchButton'>Search</button>
+                                    </div>
+                                    <div class="form-group col-sm-3 col-xs-6">
+                                        <select data-filter="make" class="filter-make filter form-control" id="category" name= "category" aria-placeholder="Category" id="category">
+                                            <option value="*">Select Category</option>
+
+                                        </select>
+                                    </div>
+                                    <div class="form-group col-sm-3 col-xs-6">
+                                        <select data-filter="model" class="filter-model filter form-control" name="price" id="price">
+                                            <option value="*">Select Price Range</option>
+                                            <option value="10-50">10 - 50</option>
+                                            <option value="50-100">50 - 100</option>
+                                            <option value="100">100 +</option>
+                                            <option value="*">Show All</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group col-sm-3 col-xs-6">
+                                        <select data-filter="type" class="filter-type filter form-control" name="quantity" id="quantity">
+                                            <option value="*">Select Quantity</option>
+                                            <option value="1-5">1 - 5</option>
+                                            <option value="5-10">5 - 10</option>
+                                            <option value="10">10 +</option>
+                                            <option value="*">Show All</option>
+                                        </select>
+                                    </div>
+                                </form>
+                            </div>
+                            <div class="row" id="filter">
+                             
+                            </div>
+                            <div class="row" id="products">
+                                
+                            </div>
+                            <!-- <div class="container">
+                               
+                            </div> -->
+                            
+                        </div>
+                        
+                    </div>
+                    <div class="col-md-12 col-sm-12 col-xs-12">
+                        <!-- <form action="#">               
+                            <div class="table-content table-responsive">
+                                <table>
+                                    <thead>
+                                        
+                                        <tr>
+                                            <th class="product-thumbnail">Image</th>
+                                            <th class="product-name">Product</th>
+                                            <th class="product-price">Description</th>
+                                            <th class="product-price">Price</th>
+                                            <th class="product-price">Category</th>
+                                            <th class="product-quantity">Quantity Available</th>
+                                            <th class="product-subtotal">Currently Marked</th>
+                                            <th class="product-remove">Edit</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id='tableBody'>
+                                    </tbody>
+                                </table>
+                            </div>
+                            
+                        </form>  -->
+                        <div id="editForm">
+
+                        </div>
+                        <div class="center" >
+                            <div class="pagination" id="pagination-container">
+                            
+                            </div>
+                          </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+
+        <!-- Start Footer Area -->
+        <footer class="htc__foooter__area gray-bg">
+            <div class="container">
+                
+                <!-- Start Copyright Area -->
+                <div class="htc__copyright__area">
+                    <div class="row">
+                        <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12">
+                            <div class="copyright__inner">
+                                <div class="copyright">
+                                    <p>© 2021 <a href="#">TEAM</a>
+                                    All Right Reserved.</p>
+                                </div>
+                                <ul class="footer__menu">
+                                    <li><a href="/adminHome">Home</a></li>
+                                    <li><a href="/allProducts">Product List</a></li>
+                                    <li><a href="/addProduct">Add Product</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- End Copyright Area -->
+            </div>
+        </footer>
+        <!-- End Footer Area -->
+    </div>
+    <!-- Body main wrapper end -->
+
+
+ <!-- jquery latest version -->
+ <script src="/static/js/vendor/jquery-1.12.0.min.js"></script>
+ <!-- Bootstrap framework js -->
+ <script src="/static/js/bootstrap.min.js"></script>
+ <!-- All js plugins included in this file. -->
+ <script src="/static/js/plugins.js"></script>
+ <script src="/static/js/slick.min.js"></script>
+ <script src="/static/js/owl.carousel.min.js"></script>
+ <!-- Waypoints.min.js. -->
+ <script src="/static/js/waypoints.min.js"></script>
+ <!-- Main js file that contents all jQuery plugins activation. -->
+ <script src="/static/js/main.js"></script>
+
+</body>
+
+</html>

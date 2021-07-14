@@ -6,7 +6,7 @@ Each project should include following major functionalities:
   o Check if password is strong enough. Define the rules of having a strong password. User passwords should be hashed and hashed version of passwords should be stored in the   
     database.
 
-User login 
+User login:
 o List available products/services in the system. User should be able to filter the results based on at least one criterion (i.e. category). Also, should be able to “Search” for a specific item. Search and filtering should be integrated together.
 o You will have paging functionality for listing products/services. Paging should be incorporated with filtering and search functions. 
 o Add item(s) to the cart and checkout. For the online shopping sites, pricing will be included but payment functionality doesn’t need to be implemented. However, you will keep track of inventory. For websites where a shopping cart does not exist, you can implement Wish list or Favorites and save those listings.
